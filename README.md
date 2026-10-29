@@ -66,7 +66,7 @@ While the UI (`/api/dashboard`) is the primary way to interact, the backend expo
        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
        "FUNCTIONS_WORKER_RUNTIME": "python",
        "DURABLE_TASK_SCHEDULER_CONNECTION_STRING": "Endpoint=http://localhost:8080;TaskHub=default;Authentication=None",
-       "AZURE_OPENAI_ENDPOINT": "https://your-resource.services.ai.azure.com/models",
+       "AZURE_OPENAI_ENDPOINT": "https://rag-chatbot.services.ai.azure.com/models",
        "AZURE_OPENAI_KEY": "your-key",
        "AZURE_OPENAI_DEPLOYMENT": "gpt-4.1-mini",
        "BLOB_CONNECTION_STRING": "UseDevelopmentStorage=true"

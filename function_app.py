@@ -5,7 +5,6 @@ import re
 import time
 import uuid
 from datetime import timedelta
-
 import azure.durable_functions as df
 import azure.functions as func
 import requests
