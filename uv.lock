@@ -2151,17 +2151,21 @@ wheels = [
 [[package]]
 name = "tech-radar-agent"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "azure-functions" },
     { name = "azure-functions-durable" },
     { name = "beautifulsoup4" },
     { name = "ddgs" },
-    { name = "isort" },
     { name = "langchain-azure-ai" },
     { name = "langchain-core" },
     { name = "langchain-openai" },
     { name = "requests" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "isort" },
 ]
 
 [package.metadata]
@@ -2170,12 +2174,14 @@ requires-dist = [
     { name = "azure-functions-durable", specifier = ">=1.7.0" },
     { name = "beautifulsoup4", specifier = ">=4.15.0" },
     { name = "ddgs", specifier = ">=9.16.1" },
-    { name = "isort", specifier = ">=9.0.2" },
     { name = "langchain-azure-ai", specifier = ">=1.2.12" },
     { name = "langchain-core", specifier = ">=1.7.0" },
     { name = "langchain-openai", specifier = ">=1.7.3" },
     { name = "requests", specifier = ">=2.34.2" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "isort" }]
 
 [[package]]
 name = "tenacity"

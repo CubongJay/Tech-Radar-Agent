@@ -9,19 +9,12 @@ dependencies = [
     "azure-functions-durable>=1.7.0",
     "beautifulsoup4>=4.15.0",
     "ddgs>=9.16.1",
-    "isort>=9.0.2",
     "langchain-azure-ai>=1.2.12",
     "langchain-core>=1.7.0",
     "langchain-openai>=1.7.3",
     "requests>=2.34.2",
 ]
 
-[project.scripts]
-tech-radar-agent = "tech_radar_agent:main"
-
-[build-system]
-requires = ["uv_build>=0.13.3,<0.14.0"]
-build-backend = "uv_build"
 
 [dependency-groups]
 dev = ["isort"]
