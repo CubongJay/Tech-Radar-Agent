@@ -8,6 +8,7 @@ from datetime import timedelta
 import azure.durable_functions as df
 import azure.functions as func
 import requests
+import logging
 from azure.storage.blob import BlobServiceClient
 from bs4 import BeautifulSoup
 from ddgs import DDGS
@@ -275,7 +276,7 @@ async def start_research(req: func.HttpRequest, client) -> func.HttpResponse:
 def search_activity(topic: str) -> list:
     """ """
 
-    print(f"Searching the web for: {topic}")
+    logging.info(f"Searching the web for: {topic}")
     results_list = []
     try:
 
@@ -311,7 +312,7 @@ def search_activity(topic: str) -> list:
 
 @app.activity_trigger(input_name="url")
 def scrape_activity(url: str) -> str:
-    print(f"`Scraping URL: {url}")
+    logging.info(f"`Scraping URL: {url}")
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
@@ -370,7 +371,7 @@ def summarize_activity(input_data: dict):
     container_client = blob_storage_client.get_container_client("summary")
     blob_client = container_client.get_blob_client(filename)
     blob_client.upload_blob(final_response, overwrite=True)
-
+    logging.info("File got created successfully")
     return f"File got created successfully, here is the url: summary/{filename}"
 
 
