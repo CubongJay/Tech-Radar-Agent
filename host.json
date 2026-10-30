@@ -6,6 +6,12 @@
         "isEnabled": true,
         "excludedTypes": "Request"
       }
+    },
+   "logLevel": {
+      "default": "Information",
+      "Function": "Information",
+      "Function.summarize_activity": "Information",
+      "Function.summarize_activity.User": "Information"
     }
   },
   "extensionBundle": {

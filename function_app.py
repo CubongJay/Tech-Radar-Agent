@@ -413,4 +413,5 @@ def tech_radar_orchestrator(context: df.DurableOrchestrationContext):
         context.set_custom_status(
             {"message": "Approval timed out. `Orchestration cancelled"}
         )
+        logging.info("Approval timed out")
         return "Approval timed out"
